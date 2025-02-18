@@ -1,0 +1,11 @@
+//TECN040J JOB (MAINFRAME) 
+//STEP1    EXEC PGM=IEFBR14
+//DD1      DD DSN=&&TEMP,
+//            DISP=(NEW,PASS),
+//            SPACE=(TRK,(1,1)),
+//            DCB=(LRECL=80,BLKSIZE=800,RECFM=F,DSORG=PS)
+//STEP2    EXEC PGM=IEFBR14
+//DD1      DD DSN=&&TEMP,
+//            DISP=(OLD,DELETE)
+//SYSPRINT DD SYSOUT=*
+//SYSIN DD *
