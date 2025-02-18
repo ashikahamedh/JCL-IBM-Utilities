@@ -1,0 +1,20 @@
+//TECN040J JOB (MAINFRAME),'ASHIK',CLASS=A,MSGCLASS=A
+//STEP1    EXEC PGM=IEFBR14
+//         SET NAME=TECN040.TEST.PS,
+//             U=TRK,
+//             P=1,
+//             S=1,
+//             D=0
+//SEQDS    DD DSN=&NAME,DISP=(NEW,CATLG,DELETE),
+//            SPACE=(&U,(&P,&S,&D)),
+//            DCB=(RECFM=F,LRECL=80,BLKSIZE=800)
+//STEP2    EXEC PGM=IEFBR14
+//         SET NAME=TECN040.TEST.PDS,
+//             U=TRK,
+//             P=1,
+//             S=1,
+//             D=1
+//PDS      DD DSN=&NAME,DISP=(NEW,CATLG,DELETE),
+//         SPACE=(&U,(&P,&S,&D)),
+//         DCB=(RECFM=F,LRECL=80,BLKSIZE=800)
+
