@@ -1,0 +1,10 @@
+//TECN040J JOB (DEV),ASHIK,CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID
+//STEP1    EXEC PGM=IDCAMS
+//SYSPRINT DD SYSOUT=*
+//SYSIN    DD *
+         DEFINE GDG(NAME(TECN040.TEST.BCK.GDG1) -
+         LIMIT(5)                               -
+         NOEMPTY                                -
+         SCRATCH
+/*
+//
